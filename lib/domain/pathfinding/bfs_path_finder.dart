@@ -1,9 +1,9 @@
 import 'dart:collection';
 
-import 'package:pathfinder_for_webspark/models/grid.dart';
-import 'package:pathfinder_for_webspark/models/point.dart';
-import 'package:pathfinder_for_webspark/pathfinding/movement_strategy.dart';
-import 'package:pathfinder_for_webspark/pathfinding/path_finder.dart';
+import 'package:pathfinder_for_webspark/domain/models/grid.dart';
+import 'package:pathfinder_for_webspark/domain/models/point.dart';
+import 'package:pathfinder_for_webspark/domain/pathfinding/movement_strategy.dart';
+import 'package:pathfinder_for_webspark/domain/pathfinding/path_finder.dart';
 
 class BfsPathFinder implements PathFinder {
   final MovementStrategy movement;

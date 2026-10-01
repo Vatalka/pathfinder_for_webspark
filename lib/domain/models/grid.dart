@@ -1,4 +1,4 @@
-import 'package:pathfinder_for_webspark/models/point.dart';
+import 'package:pathfinder_for_webspark/domain/models/point.dart';
 
 enum CellType { empty, blocked }
 
@@ -14,7 +14,11 @@ class Grid {
 
     final size = rows.first.length;
     if (size <= 1 || size >= 100 || rows.length <= 1 || rows.length >= 100) {
-      throw ArgumentError('Довжина сітки має бути > 1 і < 100');
+      throw ArgumentError('Довжина сітки має бути > 1 та < 100');
+    }
+
+    if (rows.length != size) {
+      throw ArgumentError('Сітка має бути квадратною');
     }
 
     final cells = <List<CellType>>[];

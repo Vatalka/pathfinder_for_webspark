@@ -1,5 +1,5 @@
-import 'package:pathfinder_for_webspark/models/grid.dart';
-import 'package:pathfinder_for_webspark/models/point.dart';
+import 'package:pathfinder_for_webspark/domain/models/grid.dart';
+import 'package:pathfinder_for_webspark/domain/models/point.dart';
 
 abstract class MovementStrategy {
   Iterable<Point> neighbors(Grid grid, Point from);

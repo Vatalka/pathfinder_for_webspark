@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
-import 'package:pathfinder_for_webspark/models/grid.dart';
-import 'package:pathfinder_for_webspark/models/point.dart';
-import 'package:pathfinder_for_webspark/pathfinding/bfs_path_finder.dart';
-import 'package:pathfinder_for_webspark/pathfinding/path_finder.dart';
+import 'package:pathfinder_for_webspark/domain/models/grid.dart';
+import 'package:pathfinder_for_webspark/domain/models/point.dart';
+import 'package:pathfinder_for_webspark/domain/pathfinding/bfs_path_finder.dart';
+import 'package:pathfinder_for_webspark/domain/pathfinding/path_finder.dart';
 
 void main() {
   final field = Grid.fromRows(['XXX.', 'X..X', 'X..X', '.XXX']);
