@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:pathfinder_for_webspark/core/constants/app_routes.dart';
 import 'package:pathfinder_for_webspark/data/repositories/path_repository.dart';
 import 'package:pathfinder_for_webspark/presentation/controllers/home_controller.dart';
+import 'package:pathfinder_for_webspark/presentation/controllers/process_controller.dart';
 import 'package:pathfinder_for_webspark/presentation/screens/home_screen.dart';
+import 'package:pathfinder_for_webspark/presentation/screens/process_screen.dart';
 import 'package:provider/provider.dart';
 
 class App extends StatelessWidget {
@@ -23,8 +25,12 @@ class App extends StatelessWidget {
             create: (_) => HomeController(repository: repository),
             child: const HomeScreen(),
           ),
-          AppRoutes.process: (_) =>
-              const Scaffold(body: Center(child: Text('Process screen'))),
+          AppRoutes.process: (_) => ChangeNotifierProvider(
+            create: (_) => ProcessController(repository: repository)..run(),
+            child: const ProcessScreen(),
+          ),
+          AppRoutes.results: (_) =>
+              const Scaffold(body: Center(child: Text('Result list screen'))),
         },
       ),
     );
