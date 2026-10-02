@@ -3,6 +3,7 @@ import 'package:pathfinder_for_webspark/core/constants/app_routes.dart';
 import 'package:pathfinder_for_webspark/presentation/controllers/home_controller.dart';
 import 'package:provider/provider.dart';
 
+// Екран 1.1
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
